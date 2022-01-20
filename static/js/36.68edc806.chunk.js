@@ -1,0 +1,22 @@
+(this.webpackJsonpyat = this.webpackJsonpyat || []).push([
+    [36], { 1040: function(e, t, a) {}, 1089: function(e, t, a) { "use strict";
+            a.r(t); var n = a(2),
+                r = a(42),
+                c = a(18),
+                A = a(47),
+                s = a(840),
+                o = a(96),
+                i = (a(1040), a(1));
+            t.default = function() { var e = Object(c.d)((function(e) { return e.alert })),
+                    t = e.message,
+                    a = e.visible,
+                    f = e.closeTimestamp,
+                    l = Object(n.useRef)(),
+                    u = Object(r.g)(),
+                    y = Object(c.c)(),
+                    m = Object(n.useMemo)((function() { var e = ""; return "/checkout" === u.location.pathname && (e += " checkout"), e }), [u]); return Object(n.useEffect)((function() { if (l.current) { var e = { opacity: 0 },
+                            t = { opacity: 1 };
+                        A.b.defaults({ duration: .5 }), a ? A.b.fromTo(".yat-error", e, t) : A.b.fromTo(".yat-error", t, e) } }), [a, l]), Object(n.useEffect)((function() { var e = setInterval((function() {
+                        (new Date).getTime() >= f && y(Object(o.c)()) }), 1e3); return function() { clearInterval(e) } }), [f, y]), a ? Object(i.jsxs)("div", { ref: l, role: "alert", className: "yat-error ".concat(m), children: [Object(i.jsx)("img", { src: s.a, alt: "alert-icon", className: "yat-error__icon" }), Object(i.jsx)("p", { className: "yat-error__message v2-text-xs", children: t })] }) : null } }, 840: function(e, t, a) { "use strict";
+            t.a = "data:image/png;base64,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" } }
+]);

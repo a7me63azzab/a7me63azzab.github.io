@@ -1,0 +1,52 @@
+.yat-error {
+    position: fixed;
+    z-index: 100;
+    bottom: 40px;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: 10px;
+    background-color: rgba(231, 2, 86, .2);
+    border: 1px solid #e70256
+}
+
+.yat-error__message {
+    display: block;
+    margin: 0;
+    color: #fff;
+    font-weight: 700
+}
+
+.yat-error__icon {
+    width: auto;
+    max-width: 40px!important;
+    margin-right: 15px
+}
+
+@media (min-width:992px) {
+    .yat-error {
+        bottom: 80px;
+        min-width: 10%;
+        width: auto
+    }
+}
+
+.yat-error.checkout {
+    --yat-checkout-sidebar-width: 0%;
+    left: calc(50% - var(--yat-checkout-sidebar-width)/2)
+}
+
+@media (min-width:992px) {
+    .yat-error.checkout {
+        --yat-checkout-sidebar-width: 40%
+    }
+}
+
+@media (min-width:1440px) {
+    .yat-error.checkout {
+        --yat-checkout-sidebar-width: 33%
+    }
+}

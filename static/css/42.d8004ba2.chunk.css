@@ -1,0 +1,167 @@
+#snackbar {
+    min-width: 250px;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px 35px;
+    position: fixed;
+    z-index: 999;
+    left: 50%;
+    transform: translateX(-50%) translateZ(100px);
+    bottom: 30px;
+    box-shadow: 0 32px 48px -16px rgba(0, 0, 0, .12);
+    background-image: linear-gradient(99deg, #9f4fff -13%, #ff4480 50%, #ffde00 109%);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    animation: fade-out .5s
+}
+
+#snackbar.show {
+    animation: fadein .5s
+}
+
+#snackbar.error {
+    background-image: none;
+    background-color: #ffebeb;
+    border: 1px solid #ffbfc8;
+    color: #000;
+    font-family: "Lato-Black", sans-serif
+}
+
+#snackbar.success {
+    background-image: linear-gradient(99deg, #9f4fff -13%, #ff4480 50%, #ffde00 109%)
+}
+
+#snackbar.info {
+    background-image: linear-gradient(105deg, #5a60ff -1%, #58b3ff 93%)
+}
+
+#snackbar.warning {
+    background-image: linear-gradient(118deg, #ff5a5a -2%, #ffa758 94%)
+}
+
+#snackbar.alert {
+    width: 380px;
+    background-image: none;
+    background-color: #1c1b23;
+    border-radius: 14px;
+    align-content: flex-start;
+    justify-content: flex-start;
+    padding: 32px 30px 30px;
+    text-align: left
+}
+
+@media screen and (max-width:768px) {
+    #snackbar.alert {
+        width: 294px;
+        padding: 21px 20px 19px
+    }
+}
+
+#snackbar.alert span:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%
+}
+
+#snackbar.alert span img {
+    width: 64px;
+    height: 64px;
+    margin-right: 30px
+}
+
+@media screen and (max-width:768px) {
+    #snackbar.alert span img {
+        width: 42px;
+        height: 42px;
+        margin-right: 20px;
+        vertical-align: middle
+    }
+}
+
+#snackbar.alert div {
+    color: #bdbdbd;
+    font-size: 15px;
+    line-height: 20px
+}
+
+#snackbar.alert div h1 {
+    font-size: 16px
+}
+
+@media (min-width:576px) {
+    #snackbar.alert div h1 {
+        font-size: calc(.24038vw + 14.61538px)
+    }
+}
+
+@media (min-width:992px) {
+    #snackbar.alert div h1 {
+        font-size: 17px
+    }
+}
+
+@media (max-width:575px) {
+    #snackbar.alert div h1 {
+        margin: 0 0 5px
+    }
+}
+
+#snackbar img {
+    width: 22px;
+    height: 22px;
+    margin-right: 21px
+}
+
+#snackbar h1 {
+    font-family: "Lato-Black", sans-serif;
+    font-size: 17px;
+    letter-spacing: 0;
+    color: #fff
+}
+
+@-webkit-keyframes fadein {
+    0% {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 30px;
+        opacity: 1
+    }
+}
+
+@keyframes fadein {
+    0% {
+        bottom: 0;
+        opacity: 0
+    }
+    to {
+        bottom: 30px;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeout {
+    0% {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        bottom: 30px;
+        opacity: 1
+    }
+    to {
+        bottom: 0;
+        opacity: 0
+    }
+}
